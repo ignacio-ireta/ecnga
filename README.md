@@ -13,11 +13,17 @@ This repository contains implementations of various metaheuristic algorithms to 
     - Hybrid move operations (insert and swap)
     - Multi-run statistical analysis
 
-### Coming Soon
 - **Knapsack Problem**
+  - Implementation using Simulated Annealing
+  - Features include:
+    - Basic and improved variants
+    - Adaptive cooling schedules
+    - Enhanced neighborhood structures
+    - Greedy initialization
+    - Statistical analysis and comparison tools
+
+### Coming Soon
 - **Ackley's Function Optimization**
-- **Vehicle Routing Problem (VRP)**
-- **Job Shop Scheduling**
 
 ## 🧮 Algorithms
 
@@ -28,22 +34,17 @@ This repository contains implementations of various metaheuristic algorithms to 
   - Aspiration criteria
   - Diversification strategies
 
-### Planned Implementations
 - **Simulated Annealing**
   - Temperature-based acceptance probability
-  - Cooling schedules
-  - Neighborhood structures
+  - Adaptive cooling schedules
+  - Dynamic neighborhood structures
+  - Reheating mechanisms
+  - Multi-run statistical analysis
 
+### Planned Implementations
 - **Evolutionary Algorithms**
   - Genetic Algorithms
   - Evolution Strategies
-  - Differential Evolution
-  - Multi-objective optimization
-
-- **Particle Swarm Optimization**
-  - Global and local best variants
-  - Velocity-based updates
-  - Swarm intelligence
 
 ## 🚀 Getting Started
 
@@ -61,10 +62,15 @@ This repository contains implementations of various metaheuristic algorithms to 
 python "tabu search/tabu-search_tsp.py" --mode [basic|extension|challenge] --file [instance_file] --runs [number_of_runs]
 ```
 
-Modes:
-- `basic`: Single run with standard parameters
-- `extension`: Multiple runs with statistical analysis
-- `challenge`: Comparison of different enhancement strategies
+#### Simulated Annealing for Knapsack
+```bash
+python "simulated annealing/simulated-annealing_knapsack.py"
+```
+
+Interactive modes available:
+1. Single execution (with manual or file input)
+2. Multiple executions with statistical analysis
+3. Algorithm comparison (basic vs. improved variants)
 
 ## 📊 Performance Analysis
 
@@ -80,7 +86,9 @@ Each implementation includes performance analysis tools to compare:
 ecnga/
 ├── tabu search/
 │   └── tabu-search_tsp.py
-├── simulated annealing/     (coming soon)
+├── simulated annealing/
+│   ├── simulated-annealing_knapsack.py
+│   └── input.txt
 ├── evolutionary/           (coming soon)
 ├── instances/             (coming soon)
 │   ├── tsp/
