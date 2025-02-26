@@ -8,19 +8,12 @@ This repository contains implementations of various metaheuristic algorithms to 
 - **Traveling Salesman Problem (TSP)**
   - Implementation using Tabu Search
   - Features include:
-    - Dynamic tabu tenure
-    - Frequency-based diversification
-    - Hybrid move operations (insert and swap)
-    - Multi-run statistical analysis
+
 
 - **Knapsack Problem**
   - Implementation using Simulated Annealing
   - Features include:
-    - Basic and improved variants
-    - Adaptive cooling schedules
-    - Enhanced neighborhood structures
-    - Greedy initialization
-    - Statistical analysis and comparison tools
+
 
 ### Coming Soon
 - **Ackley's Function Optimization**
@@ -45,6 +38,7 @@ This repository contains implementations of various metaheuristic algorithms to 
 - **Evolutionary Algorithms**
   - Genetic Algorithms
   - Evolution Strategies
+
 
 ## 🚀 Getting Started
 
