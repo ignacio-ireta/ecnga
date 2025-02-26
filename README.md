@@ -16,8 +16,6 @@ This repository contains implementations of various metaheuristic algorithms to 
 ### Coming Soon
 - **Knapsack Problem**
 - **Ackley's Function Optimization**
-- **Vehicle Routing Problem (VRP)**
-- **Job Shop Scheduling**
 
 ## 🧮 Algorithms
 
@@ -39,11 +37,6 @@ This repository contains implementations of various metaheuristic algorithms to 
   - Evolution Strategies
   - Differential Evolution
   - Multi-objective optimization
-
-- **Particle Swarm Optimization**
-  - Global and local best variants
-  - Velocity-based updates
-  - Swarm intelligence
 
 ## 🚀 Getting Started
 
