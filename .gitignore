@@ -169,3 +169,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+query.md
+evolutionary_strategies\hidden.py
