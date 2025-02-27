@@ -22,8 +22,14 @@ This repository contains implementations of various metaheuristic algorithms to 
     - Greedy initialization
     - Statistical analysis and comparison tools
 
-### Coming Soon
 - **Ackley's Function Optimization**
+  - Implementation using Evolutionary Strategies
+  - Features include:
+    - (μ, λ) and (μ + λ) selection schemes
+    - Self-adaptive mutation parameters
+    - Covariance Matrix Adaptation (CMA-ES)
+    - Multi-parent recombination
+    - Statistical analysis tools
 
 ## 🧮 Algorithms
 
@@ -41,10 +47,16 @@ This repository contains implementations of various metaheuristic algorithms to 
   - Reheating mechanisms
   - Multi-run statistical analysis
 
+- **Evolutionary Strategies**
+  - Population-based optimization
+  - Self-adaptation mechanisms
+  - CMA-ES implementation
+  - Derandomized adaptation
+  - Multi-parent recombination
+
 ### Planned Implementations
-- **Evolutionary Algorithms**
-  - Genetic Algorithms
-  - Evolution Strategies
+- **Genetic Algorithms**
+- **Particle Swarm Optimization**
 
 ## 🚀 Getting Started
 
@@ -67,10 +79,12 @@ python "tabu search/tabu-search_tsp.py" --mode [basic|extension|challenge] --fil
 python "simulated annealing/simulated-annealing_knapsack.py"
 ```
 
-Interactive modes available:
-1. Single execution (with manual or file input)
-2. Multiple executions with statistical analysis
-3. Algorithm comparison (basic vs. improved variants)
+#### Evolutionary Strategies for Ackley
+```bash
+python "evolutionary/evolutionary-strategies_ackley.py" --mode [basic|cmaes] --dim [dimensions] --runs [number_of_runs]
+```
+
+Interactive modes available for each algorithm with statistical analysis and parameter tuning options.
 
 ## 📊 Performance Analysis
 
@@ -89,12 +103,14 @@ ecnga/
 ├── simulated annealing/
 │   ├── simulated-annealing_knapsack.py
 │   └── input.txt
-├── evolutionary/           (coming soon)
-├── instances/             (coming soon)
+├── evolutionary/
+│   ├── evolutionary-strategies_ackley.py
+│   └── cmaes.py
+├── instances/
 │   ├── tsp/
 │   ├── knapsack/
 │   └── ackley/
-└── utils/                 (coming soon)
+└── utils/
     ├── visualization.py
     └── statistics.py
 ```
@@ -107,7 +123,8 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 - Glover, F. (1989). Tabu Search—Part I. ORSA Journal on Computing
 - Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by Simulated Annealing
-- Holland, J. H. (1992). Adaptation in Natural and Artificial Systems
+- Hansen, N. (2006). The CMA Evolution Strategy: A Comparing Review
+- Beyer, H.-G., & Schwefel, H.-P. (2002). Evolution Strategies: A Comprehensive Introduction
 
 ## 📄 License
 
