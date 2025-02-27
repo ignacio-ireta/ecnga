@@ -6,11 +6,13 @@ This repository contains implementations of various metaheuristic algorithms to 
 
 ### Currently Implemented
 - **Traveling Salesman Problem (TSP)**
-  - Implementation using Tabu Search
+  - Implementations using:
+    - Tabu Search
+    - Genetic Algorithm
   - Features include:
     - Dynamic tabu tenure
-    - Frequency-based diversification
-    - Hybrid move operations (insert and swap)
+    - Order crossover (OX)
+    - Swap mutation
     - Multi-run statistical analysis
 
 - **Knapsack Problem**
@@ -20,16 +22,26 @@ This repository contains implementations of various metaheuristic algorithms to 
     - Adaptive cooling schedules
     - Enhanced neighborhood structures
     - Greedy initialization
-    - Statistical analysis and comparison tools
 
-- **Ackley's Function Optimization**
-  - Implementation using Evolutionary Strategies
+- **Beale Function Optimization**
+  - Implementations using:
+    - Binary Genetic Algorithm
+    - Real-coded Genetic Algorithm
   - Features include:
-    - (μ, λ) and (μ + λ) selection schemes
-    - Self-adaptive mutation parameters
-    - Covariance Matrix Adaptation (CMA-ES)
-    - Multi-parent recombination
-    - Statistical analysis tools
+    - Two-point crossover
+    - Intermediate recombination
+    - Adaptive mutation rates
+    - Statistical comparison tools
+
+- **Ackley Function Optimization**
+  - Implementations using:
+    - Binary/Real Genetic Algorithms
+    - Evolutionary Strategies
+  - Features include:
+    - Self-adaptive mutation
+    - (μ, λ) and (μ + λ) selection
+    - Multi-dimensional optimization (2D-20D)
+    - CMA-ES implementation
 
 ## 🧮 Algorithms
 
@@ -45,18 +57,23 @@ This repository contains implementations of various metaheuristic algorithms to 
   - Adaptive cooling schedules
   - Dynamic neighborhood structures
   - Reheating mechanisms
-  - Multi-run statistical analysis
+
+- **Genetic Algorithms**
+  - Binary and real-coded representations
+  - Stochastic Universal Sampling
+  - Multiple crossover operators
+  - Elitism and adaptive parameters
+  - Specialized TSP operators
 
 - **Evolutionary Strategies**
-  - Population-based optimization
-  - Self-adaptation mechanisms
-  - CMA-ES implementation
+  - Self-adaptive mutation parameters
   - Derandomized adaptation
+  - Covariance Matrix Adaptation (CMA-ES)
   - Multi-parent recombination
 
 ### Planned Implementations
-- **Genetic Algorithms**
 - **Particle Swarm Optimization**
+- **Differential Evolution**
 
 ## 🚀 Getting Started
 
@@ -71,58 +88,47 @@ This repository contains implementations of various metaheuristic algorithms to 
 
 #### Tabu Search for TSP
 ```bash
-python "tabu search/tabu-search_tsp.py" --mode [basic|extension|challenge] --file [instance_file] --runs [number_of_runs]
+python "tabu search\tabu-search_tsp.py" --mode [basic|extension|challenge] --file [instance_file] --runs [number_of_runs]
 ```
 
 #### Simulated Annealing for Knapsack
 ```bash
-python "simulated annealing/simulated-annealing_knapsack.py"
+python "simulated annealing\simulated-annealing_knapsack.py"
 ```
 
-#### Evolutionary Strategies for Ackley
+#### Genetic Algorithms
 ```bash
-python "evolutionary/evolutionary-strategies_ackley.py" --mode [basic|cmaes] --dim [dimensions] --runs [number_of_runs]
+python "genetic_algorithms\ga_solution.py" --function [beale|ackley|tsp|all] --tsp-file [instance_file] --runs [number_of_runs]
 ```
 
-Interactive modes available for each algorithm with statistical analysis and parameter tuning options.
-
-## 📊 Performance Analysis
-
-Each implementation includes performance analysis tools to compare:
-- Solution quality
-- Convergence speed
-- Statistical robustness
-- Parameter sensitivity
+#### Evolutionary Strategies
+```bash
+python "evolutionary_strategies\es_solution.py" --function [ackley] --dim [dimensions] --runs [number_of_runs]
+```
 
 ## 🔧 Project Structure
 
 ```
-ecnga/
-├── tabu search/
+ecnga\
+├── tabu search\
 │   └── tabu-search_tsp.py
-├── simulated annealing/
+├── simulated annealing\
 │   ├── simulated-annealing_knapsack.py
 │   └── input.txt
-├── evolutionary/
-│   ├── evolutionary-strategies_ackley.py
-│   └── cmaes.py
-├── instances/
-│   ├── tsp/
-│   ├── knapsack/
-│   └── ackley/
-└── utils/
+├── genetic_algorithms\
+│   └── ga_solution.py
+├── evolutionary_strategies\
+│   └── es_solution.py
+└── utils\
     ├── visualization.py
     └── statistics.py
 ```
-
-## 📝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## 📚 References
 
 - Glover, F. (1989). Tabu Search—Part I. ORSA Journal on Computing
 - Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by Simulated Annealing
+- Goldberg, D. E. (1989). Genetic Algorithms in Search, Optimization & Machine Learning
 - Hansen, N. (2006). The CMA Evolution Strategy: A Comparing Review
 - Beyer, H.-G., & Schwefel, H.-P. (2002). Evolution Strategies: A Comprehensive Introduction
 
