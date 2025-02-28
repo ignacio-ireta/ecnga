@@ -6,17 +6,42 @@ This repository contains implementations of various metaheuristic algorithms to 
 
 ### Currently Implemented
 - **Traveling Salesman Problem (TSP)**
-  - Implementation using Tabu Search
+  - Implementations using:
+    - Tabu Search
+    - Genetic Algorithm
   - Features include:
-
+    - Dynamic tabu tenure
+    - Order crossover (OX)
+    - Swap mutation
+    - Multi-run statistical analysis
 
 - **Knapsack Problem**
   - Implementation using Simulated Annealing
   - Features include:
+    - Basic and improved variants
+    - Adaptive cooling schedules
+    - Enhanced neighborhood structures
+    - Greedy initialization
 
+- **Beale Function Optimization**
+  - Implementations using:
+    - Binary Genetic Algorithm
+    - Real-coded Genetic Algorithm
+  - Features include:
+    - Two-point crossover
+    - Intermediate recombination
+    - Adaptive mutation rates
+    - Statistical comparison tools
 
-### Coming Soon
-- **Ackley's Function Optimization**
+- **Ackley Function Optimization**
+  - Implementations using:
+    - Binary/Real Genetic Algorithms
+    - Evolutionary Strategies
+  - Features include:
+    - Self-adaptive mutation
+    - (μ, λ) and (μ + λ) selection
+    - Multi-dimensional optimization (2D-20D)
+    - CMA-ES implementation
 
 ## 🧮 Algorithms
 
@@ -32,13 +57,23 @@ This repository contains implementations of various metaheuristic algorithms to 
   - Adaptive cooling schedules
   - Dynamic neighborhood structures
   - Reheating mechanisms
-  - Multi-run statistical analysis
+
+- **Genetic Algorithms**
+  - Binary and real-coded representations
+  - Stochastic Universal Sampling
+  - Multiple crossover operators
+  - Elitism and adaptive parameters
+  - Specialized TSP operators
+
+- **Evolutionary Strategies**
+  - Self-adaptive mutation parameters
+  - Derandomized adaptation
+  - Covariance Matrix Adaptation (CMA-ES)
+  - Multi-parent recombination
 
 ### Planned Implementations
-- **Evolutionary Algorithms**
-  - Genetic Algorithms
-  - Evolution Strategies
-
+- **Particle Swarm Optimization**
+- **Differential Evolution**
 
 ## 🚀 Getting Started
 
@@ -53,55 +88,49 @@ This repository contains implementations of various metaheuristic algorithms to 
 
 #### Tabu Search for TSP
 ```bash
-python "tabu search/tabu-search_tsp.py" --mode [basic|extension|challenge] --file [instance_file] --runs [number_of_runs]
+python "tabu search\tabu-search_tsp.py" --mode [basic|extension|challenge] --file [instance_file] --runs [number_of_runs]
 ```
 
 #### Simulated Annealing for Knapsack
 ```bash
-python "simulated annealing/simulated-annealing_knapsack.py"
+python "simulated annealing\simulated-annealing_knapsack.py"
 ```
 
-Interactive modes available:
-1. Single execution (with manual or file input)
-2. Multiple executions with statistical analysis
-3. Algorithm comparison (basic vs. improved variants)
+#### Genetic Algorithms
+```bash
+python "genetic_algorithms\ga_solution.py" --function [beale|ackley|tsp|all] --tsp-file [instance_file] --runs [number_of_runs]
+```
 
-## 📊 Performance Analysis
-
-Each implementation includes performance analysis tools to compare:
-- Solution quality
-- Convergence speed
-- Statistical robustness
-- Parameter sensitivity
+#### Evolutionary Strategies
+```bash
+python "evolutionary_strategies\es_solution.py" --function [ackley] --dim [dimensions] --runs [number_of_runs]
+```
 
 ## 🔧 Project Structure
 
 ```
-ecnga/
-├── tabu search/
+ecnga\
+├── tabu search\
 │   └── tabu-search_tsp.py
-├── simulated annealing/
+├── simulated annealing\
 │   ├── simulated-annealing_knapsack.py
 │   └── input.txt
-├── evolutionary/           (coming soon)
-├── instances/             (coming soon)
-│   ├── tsp/
-│   ├── knapsack/
-│   └── ackley/
-└── utils/                 (coming soon)
+├── genetic_algorithms\
+│   └── ga_solution.py
+├── evolutionary_strategies\
+│   └── es_solution.py
+└── utils\
     ├── visualization.py
     └── statistics.py
 ```
-
-## 📝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## 📚 References
 
 - Glover, F. (1989). Tabu Search—Part I. ORSA Journal on Computing
 - Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by Simulated Annealing
-- Holland, J. H. (1992). Adaptation in Natural and Artificial Systems
+- Goldberg, D. E. (1989). Genetic Algorithms in Search, Optimization & Machine Learning
+- Hansen, N. (2006). The CMA Evolution Strategy: A Comparing Review
+- Beyer, H.-G., & Schwefel, H.-P. (2002). Evolution Strategies: A Comprehensive Introduction
 
 ## 📄 License
 
